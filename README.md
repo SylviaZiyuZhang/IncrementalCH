@@ -1,6 +1,6 @@
 ### IncrementalCH
 
-This repository contains a sequential and parallel implementation of the algorithms in "Randomized Incremental Convex Hull is Highly Parallel" by Guy E. Blelloch et al. using Cilk.
+This repository contains a sequential and parallel implementation of the algorithms in "Randomized Incremental Convex Hull is Highly Parallel" by Guy E. Blelloch et al. using Cilk. It was developed over a short span of time as a final project for CMU 15-418. Issues would be appreciated if readers have comments or suggestions.
 
 There are four main parts:
 1. The paper's sequential algorithm.
