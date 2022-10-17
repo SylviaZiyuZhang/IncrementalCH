@@ -30,12 +30,14 @@ There are three test case generator written in Python. They all avoid creating c
 2. **2D_generator_fast.py**: This uses primes to generate large test cases with small convex hulls.
 3. **2D_generator_parabolic.py**: This uses parabolas to generate large test cases with large convex hulls.
 
-#Important Notes
+# Important Notes
 
-Unfortunately MIT's OpenCilk does not include a way to set the number of workers during runtime, so the user must do it manually via the bash command
+Unfortunately MIT's OpenCilk does not include a way to set the number of workers during runtime, so the user must inject it manually as an environment variable with the shell command
 
 > `export CILK_NWORKERS=n`
 
-In addition, MIT's OpenCilk's method to get the current worker id is deprecated, so the per thread timing in **parhull** may not work.
+## Known Issues
+
+In addition, OpenCilk's method to get the current worker id is deprecated, so the per thread timing in **parhull** may not be accurate.
 
 This program will not solve arbitrary complex hulls and may crash if given one. The input data must have **no colinear points**. The test cases generators ensure this, but if the user adds any others, make sure that they have no colinear points.
